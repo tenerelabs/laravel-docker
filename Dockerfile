@@ -43,7 +43,7 @@ RUN docker-php-ext-install \
     zip
 
 # 5. composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.9.1 /usr/bin/composer /usr/bin/composer
 
 # 6. we need a user with the same UID/GID with host user
 # so when we execute CLI commands, all the host file's permissions and ownership remains intact
